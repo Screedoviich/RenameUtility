@@ -47,6 +47,7 @@
             this.ButtonStartRename = new System.Windows.Forms.Button();
             this.ButtonSave = new System.Windows.Forms.Button();
             this.ButtonSaveIn = new System.Windows.Forms.Button();
+            this.CheckBoxTags = new System.Windows.Forms.CheckBox();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             this.SuspendLayout();
@@ -246,11 +247,22 @@
             this.ButtonSaveIn.UseVisualStyleBackColor = true;
             this.ButtonSaveIn.Click += new System.EventHandler(this.ButtonSaveIn_Click);
             // 
+            // CheckBoxTags
+            // 
+            this.CheckBoxTags.AutoSize = true;
+            this.CheckBoxTags.Location = new System.Drawing.Point(32, 296);
+            this.CheckBoxTags.Name = "CheckBoxTags";
+            this.CheckBoxTags.Size = new System.Drawing.Size(162, 17);
+            this.CheckBoxTags.TabIndex = 6;
+            this.CheckBoxTags.Text = "Теги в конце названия";
+            this.CheckBoxTags.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 450);
+            this.Controls.Add(this.CheckBoxTags);
             this.Controls.Add(this.ButtonSaveIn);
             this.Controls.Add(this.ButtonSave);
             this.Controls.Add(this.ButtonStartRename);
@@ -295,6 +307,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GridRename;
         private System.Windows.Forms.ToolStripMenuItem MenuItemExit;
         private System.Windows.Forms.ToolStripMenuItem MenuItemChanges;
+        private System.Windows.Forms.CheckBox CheckBoxTags;
     }
 }
 

@@ -70,7 +70,7 @@ namespace RenameUtility
         /// </summary>
         /// <param name="fileName">Изначальное имя файла.</param>
         /// <returns>Редактированное имя файла.</returns>
-        public string ChangeName(string fileName)
+        public string ChangeName(string fileName, bool tagsChecked)
         {
             var strBuildName = new StringBuilder();
             strBuildName.Append(fileName);
@@ -80,6 +80,17 @@ namespace RenameUtility
             strBuildName.Insert(7, ".");
             strBuildName.Insert(13, "-");
             strBuildName.Insert(16, "-");
+            if (tagsChecked)
+            {
+                if (fileName.Contains("IMG_"))
+                {
+                    strBuildName.Append("_IMG");
+                }
+                else if (fileName.Contains("VID_"))
+                {
+                    strBuildName.Append("_VID");
+                }
+            }
             return strBuildName.ToString();
         }
         public void SaveIn(FolderBrowserDialog openFolder, FormSave formSave)

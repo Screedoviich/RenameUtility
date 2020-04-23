@@ -34,11 +34,12 @@ namespace RenameUtility
         private void ButtonStartRename_Click(object sender, EventArgs e)
         {
             ProgressBar.Maximum = FileInfoCount.FileInfoList.Count;
+            ProgressBar.Value = 0;
             for (int i = 0; i < FileInfoCount.FileInfoList.Count; i++)
             {
                 if (methods.Checked(FileInfoCount.FileInfoList[i].FileName))
                 {
-                    FileInfoCount.FileInfoList[i].FileNameNew = methods.ChangeName(FileInfoCount.FileInfoList[i].FileName);
+                    FileInfoCount.FileInfoList[i].FileNameNew = methods.ChangeName(FileInfoCount.FileInfoList[i].FileName, CheckBoxTags.Checked);
                     FileInfoCount.FileInfoList[i].FileRename = true;
                 }
                 else

@@ -62,7 +62,7 @@
             this.Name = "FormSave";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сохранение...";
-            this.Shown += new System.EventHandler(this.FormSave_Shown);
+            this.Shown += new System.EventHandler(this.FormSave_Show);
             this.ResumeLayout(false);
             this.PerformLayout();
 
