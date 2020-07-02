@@ -1,0 +1,7 @@
+# Root
+/.vs
+/.git
+
+# Compilation trash
+RenameUtility/bin
+RenameUtility/obj
