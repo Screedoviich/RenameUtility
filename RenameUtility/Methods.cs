@@ -74,6 +74,7 @@ namespace RenameUtility
         {
             var strBuildName = new StringBuilder();
             strBuildName.Append(fileName);
+            strBuildName.Replace("PixelCam_Plus_", String.Empty);
             strBuildName.Replace("IMG_", String.Empty);
             strBuildName.Replace("VID_", String.Empty);
             strBuildName.Insert(4, ".");
