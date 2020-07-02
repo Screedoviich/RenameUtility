@@ -48,7 +48,7 @@ namespace RenameUtility
             get { return fileDirectory; }
             set { fileDirectory = value; }
         }
-        //Подлежит ли файл переименованию?
+        //Подлежит ли файл переименованию
         private bool fileRename;
         public bool FileRename
         {
