@@ -77,9 +77,9 @@
             this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(16, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.Size = new System.Drawing.Size(140, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "© 2019";
+            this.label1.Text = "© 2019 - 2020";
             // 
             // LabelAboutProgram6
             // 
@@ -87,7 +87,7 @@
             this.LabelAboutProgram6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelAboutProgram6.Location = new System.Drawing.Point(80, 72);
             this.LabelAboutProgram6.Name = "LabelAboutProgram6";
-            this.LabelAboutProgram6.Size = new System.Drawing.Size(92, 16);
+            this.LabelAboutProgram6.Size = new System.Drawing.Size(118, 20);
             this.LabelAboutProgram6.TabIndex = 1;
             this.LabelAboutProgram6.Text = "Screedoviich";
             // 
@@ -97,9 +97,9 @@
             this.LabelAboutProgram5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelAboutProgram5.Location = new System.Drawing.Point(88, 48);
             this.LabelAboutProgram5.Name = "LabelAboutProgram5";
-            this.LabelAboutProgram5.Size = new System.Drawing.Size(73, 16);
+            this.LabelAboutProgram5.Size = new System.Drawing.Size(98, 20);
             this.LabelAboutProgram5.TabIndex = 1;
-            this.LabelAboutProgram5.Text = "2.0.2_GUI";
+            this.LabelAboutProgram5.Text = "2.1.0_GUI";
             // 
             // LabelAboutProgram4
             // 
@@ -107,7 +107,7 @@
             this.LabelAboutProgram4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelAboutProgram4.Location = new System.Drawing.Point(64, 24);
             this.LabelAboutProgram4.Name = "LabelAboutProgram4";
-            this.LabelAboutProgram4.Size = new System.Drawing.Size(97, 16);
+            this.LabelAboutProgram4.Size = new System.Drawing.Size(130, 20);
             this.LabelAboutProgram4.TabIndex = 1;
             this.LabelAboutProgram4.Text = "RenameUtility";
             // 
@@ -117,7 +117,7 @@
             this.LabelAboutProgram3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelAboutProgram3.Location = new System.Drawing.Point(16, 72);
             this.LabelAboutProgram3.Name = "LabelAboutProgram3";
-            this.LabelAboutProgram3.Size = new System.Drawing.Size(58, 16);
+            this.LabelAboutProgram3.Size = new System.Drawing.Size(74, 20);
             this.LabelAboutProgram3.TabIndex = 0;
             this.LabelAboutProgram3.Text = "Автор:";
             // 
@@ -127,7 +127,7 @@
             this.LabelAboutProgram2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelAboutProgram2.Location = new System.Drawing.Point(16, 48);
             this.LabelAboutProgram2.Name = "LabelAboutProgram2";
-            this.LabelAboutProgram2.Size = new System.Drawing.Size(67, 16);
+            this.LabelAboutProgram2.Size = new System.Drawing.Size(86, 20);
             this.LabelAboutProgram2.TabIndex = 0;
             this.LabelAboutProgram2.Text = "Версия:";
             // 
@@ -137,7 +137,7 @@
             this.LabelAboutProgram1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelAboutProgram1.Location = new System.Drawing.Point(16, 24);
             this.LabelAboutProgram1.Name = "LabelAboutProgram1";
-            this.LabelAboutProgram1.Size = new System.Drawing.Size(42, 16);
+            this.LabelAboutProgram1.Size = new System.Drawing.Size(56, 20);
             this.LabelAboutProgram1.TabIndex = 0;
             this.LabelAboutProgram1.Text = "Имя:";
             // 
@@ -156,15 +156,15 @@
             this.LabelDescription.AutoSize = true;
             this.LabelDescription.Location = new System.Drawing.Point(16, 24);
             this.LabelDescription.Name = "LabelDescription";
-            this.LabelDescription.Size = new System.Drawing.Size(430, 78);
+            this.LabelDescription.Size = new System.Drawing.Size(536, 102);
             this.LabelDescription.TabIndex = 0;
             this.LabelDescription.Text = resources.GetString("LabelDescription.Text");
             // 
             // FormAboutProgram
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 272);
+            this.ClientSize = new System.Drawing.Size(486, 260);
             this.Controls.Add(this.GroupBoxDescription);
             this.Controls.Add(this.GroupBoxInfoAboutProgram);
             this.Controls.Add(this.PictureBox);
