@@ -16,6 +16,8 @@ namespace RenameUtility
         private void FormMain_Load(object sender, EventArgs e)
         {
             DataGrid.DataSource = FileInfoCount.FileInfoList;
+            FormTagsSettings.TagPhoto = "_IMG";
+            FormTagsSettings.TagVideo = "_VID";
         }
 
         private void ButtonOpenFolder_Click(object sender, EventArgs e)
@@ -81,6 +83,11 @@ namespace RenameUtility
         private void MenuItemChanges_Click(object sender, EventArgs e)
         {
             new FormChanges().Show();
+        }
+
+        private void MenuItemTagsSettings_Click(object sender, EventArgs e)
+        {
+            new FormTagsSettings().ShowDialog();
         }
     }
 }

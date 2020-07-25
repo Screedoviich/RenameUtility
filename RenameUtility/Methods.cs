@@ -85,13 +85,14 @@ namespace RenameUtility
             {
                 if (fileName.Contains("IMG_"))
                 {
-                    strBuildName.Append("_IMG");
+                    strBuildName.Append(FormTagsSettings.TagPhoto);
                 }
                 else if (fileName.Contains("VID_"))
                 {
-                    strBuildName.Append("_VID");
+                    strBuildName.Append(FormTagsSettings.TagVideo);
                 }
             }
+            strBuildName.Append(FormTagsSettings.TagSelf);
             return strBuildName.ToString();
         }
         public void SaveIn(FolderBrowserDialog openFolder, FormSave formSave)
