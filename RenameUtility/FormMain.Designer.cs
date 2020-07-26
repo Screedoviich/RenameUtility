@@ -33,6 +33,7 @@
             this.TextBoxFolder = new System.Windows.Forms.TextBox();
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.MenuItemFolder = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemTagsSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemReference = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemChanges = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +49,6 @@
             this.ButtonSave = new System.Windows.Forms.Button();
             this.ButtonSaveIn = new System.Windows.Forms.Button();
             this.CheckBoxTags = new System.Windows.Forms.CheckBox();
-            this.MenuItemTagsSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             this.SuspendLayout();
@@ -87,7 +87,7 @@
             this.MenuItemReference});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(839, 30);
+            this.MenuStrip.Size = new System.Drawing.Size(839, 25);
             this.MenuStrip.TabIndex = 3;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -98,13 +98,20 @@
             this.MenuItemExit});
             this.MenuItemFolder.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MenuItemFolder.Name = "MenuItemFolder";
-            this.MenuItemFolder.Size = new System.Drawing.Size(59, 26);
+            this.MenuItemFolder.Size = new System.Drawing.Size(59, 21);
             this.MenuItemFolder.Text = "Файл";
+            // 
+            // MenuItemTagsSettings
+            // 
+            this.MenuItemTagsSettings.Name = "MenuItemTagsSettings";
+            this.MenuItemTagsSettings.Size = new System.Drawing.Size(211, 26);
+            this.MenuItemTagsSettings.Text = "Настройки тегов";
+            this.MenuItemTagsSettings.Click += new System.EventHandler(this.MenuItemTagsSettings_Click);
             // 
             // MenuItemExit
             // 
             this.MenuItemExit.Name = "MenuItemExit";
-            this.MenuItemExit.Size = new System.Drawing.Size(224, 26);
+            this.MenuItemExit.Size = new System.Drawing.Size(211, 26);
             this.MenuItemExit.Text = "Выход";
             this.MenuItemExit.Click += new System.EventHandler(this.MenuItemExit_Click);
             // 
@@ -115,7 +122,7 @@
             this.MenuItemAboutProgram});
             this.MenuItemReference.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MenuItemReference.Name = "MenuItemReference";
-            this.MenuItemReference.Size = new System.Drawing.Size(82, 26);
+            this.MenuItemReference.Size = new System.Drawing.Size(82, 21);
             this.MenuItemReference.Text = "Справка";
             // 
             // MenuItemChanges
@@ -257,13 +264,6 @@
             this.CheckBoxTags.TabIndex = 6;
             this.CheckBoxTags.Text = "Теги в конце названия";
             this.CheckBoxTags.UseVisualStyleBackColor = true;
-            // 
-            // MenuItemTagsSettings
-            // 
-            this.MenuItemTagsSettings.Name = "MenuItemTagsSettings";
-            this.MenuItemTagsSettings.Size = new System.Drawing.Size(224, 26);
-            this.MenuItemTagsSettings.Text = "Настройки тегов";
-            this.MenuItemTagsSettings.Click += new System.EventHandler(this.MenuItemTagsSettings_Click);
             // 
             // FormMain
             // 

@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChanges));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.GroupBox210 = new System.Windows.Forms.GroupBox();
+            this.Label210 = new System.Windows.Forms.Label();
             this.GroupBox203 = new System.Windows.Forms.GroupBox();
             this.Label203 = new System.Windows.Forms.Label();
             this.GroupBox202 = new System.Windows.Forms.GroupBox();
             this.Label202 = new System.Windows.Forms.Label();
             this.GroupBox201 = new System.Windows.Forms.GroupBox();
             this.Label201 = new System.Windows.Forms.Label();
-            this.GroupBox210 = new System.Windows.Forms.GroupBox();
-            this.Label210 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.GroupBox210.SuspendLayout();
             this.GroupBox203.SuspendLayout();
             this.GroupBox202.SuspendLayout();
             this.GroupBox201.SuspendLayout();
-            this.GroupBox210.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,6 +56,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(384, 264);
             this.panel1.TabIndex = 0;
+            // 
+            // GroupBox210
+            // 
+            this.GroupBox210.Controls.Add(this.Label210);
+            this.GroupBox210.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GroupBox210.Location = new System.Drawing.Point(8, 8);
+            this.GroupBox210.Name = "GroupBox210";
+            this.GroupBox210.Size = new System.Drawing.Size(352, 104);
+            this.GroupBox210.TabIndex = 0;
+            this.GroupBox210.TabStop = false;
+            this.GroupBox210.Text = "Версия 2.1.0_GUI";
+            // 
+            // Label210
+            // 
+            this.Label210.AutoSize = true;
+            this.Label210.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Label210.Location = new System.Drawing.Point(8, 24);
+            this.Label210.Name = "Label210";
+            this.Label210.Size = new System.Drawing.Size(386, 85);
+            this.Label210.TabIndex = 0;
+            this.Label210.Text = "Добавлено окно, в котором можно самостоятельно\r\nустановить необходимые теги для ф" +
+    "ото и видео.\r\nТакже добавлена возможность установки тегов ко\r\nвсем видам файлов." +
+    "\r\nРазличные исправления.";
             // 
             // GroupBox203
             // 
@@ -74,9 +97,9 @@
             this.Label203.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Label203.Location = new System.Drawing.Point(8, 24);
             this.Label203.Name = "Label203";
-            this.Label203.Size = new System.Drawing.Size(404, 17);
+            this.Label203.Size = new System.Drawing.Size(409, 17);
             this.Label203.TabIndex = 0;
-            this.Label203.Text = "Корректное переименование файлов с Google Camera";
+            this.Label203.Text = "Корректное переименование файлов с Google Camera.";
             // 
             // GroupBox202
             // 
@@ -123,29 +146,6 @@
     " изменяя старые.\r\nСкопированы будут только те файлы, которые\r\nподлежат редактиро" +
     "ванию.";
             // 
-            // GroupBox210
-            // 
-            this.GroupBox210.Controls.Add(this.Label210);
-            this.GroupBox210.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GroupBox210.Location = new System.Drawing.Point(8, 8);
-            this.GroupBox210.Name = "GroupBox210";
-            this.GroupBox210.Size = new System.Drawing.Size(352, 104);
-            this.GroupBox210.TabIndex = 0;
-            this.GroupBox210.TabStop = false;
-            this.GroupBox210.Text = "Версия 2.1.0_GUI";
-            // 
-            // Label210
-            // 
-            this.Label210.AutoSize = true;
-            this.Label210.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Label210.Location = new System.Drawing.Point(8, 24);
-            this.Label210.Name = "Label210";
-            this.Label210.Size = new System.Drawing.Size(386, 85);
-            this.Label210.TabIndex = 0;
-            this.Label210.Text = "Добавлено окно, в котором можно самостоятельно\r\nустановить необходимые теги для ф" +
-    "ото и видео.\r\nТакже добавлена возможность установки тегов ко\r\nвсем видам файлов." +
-    "\r\nРазличные исправления.";
-            // 
             // FormChanges
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
@@ -161,14 +161,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Изменения";
             this.panel1.ResumeLayout(false);
+            this.GroupBox210.ResumeLayout(false);
+            this.GroupBox210.PerformLayout();
             this.GroupBox203.ResumeLayout(false);
             this.GroupBox203.PerformLayout();
             this.GroupBox202.ResumeLayout(false);
             this.GroupBox202.PerformLayout();
             this.GroupBox201.ResumeLayout(false);
             this.GroupBox201.PerformLayout();
-            this.GroupBox210.ResumeLayout(false);
-            this.GroupBox210.PerformLayout();
             this.ResumeLayout(false);
 
         }
