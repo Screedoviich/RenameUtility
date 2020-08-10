@@ -12,6 +12,7 @@ namespace RenameUtility
 {
     public partial class FormTagsSettings : Form
     {
+        public static bool Tags { get; set; }
         public static string TagPhoto { get; set; }
         public static string TagVideo { get; set; }
         public static string TagSelf { get; set; }
@@ -23,6 +24,7 @@ namespace RenameUtility
 
         private void FormTagsSettings_Load(object sender, EventArgs e)
         {
+            CheckBoxTags.Checked = Tags;
             TextBoxTagPhoto.Text = TagPhoto;
             TextBoxTagVideo.Text = TagVideo;
             TextBoxTagSelf.Text = TagSelf;
@@ -30,6 +32,7 @@ namespace RenameUtility
 
         private void FormTagsSettings_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Tags = CheckBoxTags.Checked;
             TagPhoto = TextBoxTagPhoto.Text;
             TagVideo = TextBoxTagVideo.Text;
             TagSelf = TextBoxTagSelf.Text;

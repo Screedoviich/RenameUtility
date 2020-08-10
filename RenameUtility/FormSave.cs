@@ -5,7 +5,7 @@ namespace RenameUtility
 {
     public partial class FormSave : Form
     {
-        private FolderBrowserDialog folder;
+        private FolderBrowserDialog folder { get; set; }
         public FormSave(FolderBrowserDialog openFoler)
         {
             InitializeComponent();

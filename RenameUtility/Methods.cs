@@ -8,7 +8,7 @@ namespace RenameUtility
     public class Methods
     {
         /// <summary>
-        /// Проверка, выбрана ли папка. Отчистка таблицы, если папка выбрана.
+        /// Проверка, выбрана ли папка. Очистка таблицы, если папка выбрана.
         /// </summary>
         /// <param name="openFolder">Объект открытия папки.</param>
         /// <param name="TextBoxFolder">Заданное текстовое поле.</param>
@@ -27,6 +27,7 @@ namespace RenameUtility
                 MessageBox.Show("Вы не выбрали папку", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
         /// <summary>
         /// Принимает директорию и устанавливает значение в свойства.
         /// </summary>
@@ -49,6 +50,7 @@ namespace RenameUtility
                 FileInfoCount.FileInfoList[i].FileDirectory = directory + @"\";
             }
         }
+
         /// <summary>
         /// Метод проверяет, является ли выбранный файл фотографией или видеозаписью.
         /// </summary>
@@ -65,12 +67,17 @@ namespace RenameUtility
                 return false;
             }
         }
+
         /// <summary>
-        /// Возвращает редактированное значение имени файла.
+        /// Возвращает изменённое имя в соответствии с настройками.
         /// </summary>
-        /// <param name="fileName">Изначальное имя файла.</param>
-        /// <returns>Редактированное имя файла.</returns>
-        public string ChangeName(string fileName, bool tagsChecked)
+        /// <param name="fileName">Начальное имя.</param>
+        /// <param name="tagsChecked">Необходимость добавления меток.</param>
+        /// <param name="tagPhoto">Тег для фото.</param>
+        /// <param name="tagVideo">Тег для видео.</param>
+        /// <param name="tagSelf">Общий конечный тег.</param>
+        /// <returns>Редактированное имя.</returns>
+        public string ChangeName(string fileName, bool tagsChecked, string tagPhoto, string tagVideo, string tagSelf)
         {
             var strBuildName = new StringBuilder();
             strBuildName.Append(fileName);
@@ -85,16 +92,17 @@ namespace RenameUtility
             {
                 if (fileName.Contains("IMG_"))
                 {
-                    strBuildName.Append(FormTagsSettings.TagPhoto);
+                    strBuildName.Append(tagPhoto);
                 }
                 else if (fileName.Contains("VID_"))
                 {
-                    strBuildName.Append(FormTagsSettings.TagVideo);
+                    strBuildName.Append(tagVideo);
                 }
             }
-            strBuildName.Append(FormTagsSettings.TagSelf);
+            strBuildName.Append(tagSelf);
             return strBuildName.ToString();
         }
+
         public void SaveIn(FolderBrowserDialog openFolder, FormSave formSave)
         {
             string fromSave;

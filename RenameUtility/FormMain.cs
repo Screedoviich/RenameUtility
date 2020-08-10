@@ -41,7 +41,7 @@ namespace RenameUtility
             {
                 if (methods.Checked(FileInfoCount.FileInfoList[i].FileName))
                 {
-                    FileInfoCount.FileInfoList[i].FileNameNew = methods.ChangeName(FileInfoCount.FileInfoList[i].FileName, CheckBoxTags.Checked);
+                    FileInfoCount.FileInfoList[i].FileNameNew = methods.ChangeName(FileInfoCount.FileInfoList[i].FileName, FormTagsSettings.Tags, FormTagsSettings.TagPhoto, FormTagsSettings.TagVideo, FormTagsSettings.TagSelf);
                     FileInfoCount.FileInfoList[i].FileRename = true;
                 }
                 else
