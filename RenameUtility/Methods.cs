@@ -58,14 +58,16 @@ namespace RenameUtility
         /// <returns>Истинное или ложное значение.</returns>
         public bool Checked(string fileName)
         {
-            if ((fileName.Length > 18) && ((fileName.Contains("IMG")) || (fileName.Contains("VID"))))
+            if ((fileName.Length > 18) && ((fileName.Contains("IMG")) || (fileName.Contains("VID"))) && (fileName[4] != '.'))
             {
-                return true;
+                    return true;
+
             }
             else
             {
                 return false;
             }
+
         }
 
         /// <summary>
