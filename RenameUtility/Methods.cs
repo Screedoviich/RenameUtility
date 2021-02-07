@@ -143,5 +143,10 @@ namespace RenameUtility
             }
             return tempCount;
         }
+
+        public void Method()
+        {
+            //Этот метод ничего не делает :/
+        }
     }
 }
