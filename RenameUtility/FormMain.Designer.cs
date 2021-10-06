@@ -44,7 +44,6 @@
             this.GridFileExtension = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GridExtension = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GridRename = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProgressBar = new System.Windows.Forms.ProgressBar();
             this.ButtonStartRename = new System.Windows.Forms.Button();
             this.ButtonSave = new System.Windows.Forms.Button();
             this.ButtonSaveIn = new System.Windows.Forms.Button();
@@ -86,7 +85,7 @@
             this.MenuItemReference});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(839, 24);
+            this.MenuStrip.Size = new System.Drawing.Size(839, 25);
             this.MenuStrip.TabIndex = 3;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -97,20 +96,20 @@
             this.MenuItemExit});
             this.MenuItemFolder.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MenuItemFolder.Name = "MenuItemFolder";
-            this.MenuItemFolder.Size = new System.Drawing.Size(49, 20);
+            this.MenuItemFolder.Size = new System.Drawing.Size(59, 21);
             this.MenuItemFolder.Text = "Файл";
             // 
             // MenuItemTagsSettings
             // 
             this.MenuItemTagsSettings.Name = "MenuItemTagsSettings";
-            this.MenuItemTagsSettings.Size = new System.Drawing.Size(170, 22);
+            this.MenuItemTagsSettings.Size = new System.Drawing.Size(211, 26);
             this.MenuItemTagsSettings.Text = "Настройки тегов";
             this.MenuItemTagsSettings.Click += new System.EventHandler(this.MenuItemTagsSettings_Click);
             // 
             // MenuItemExit
             // 
             this.MenuItemExit.Name = "MenuItemExit";
-            this.MenuItemExit.Size = new System.Drawing.Size(170, 22);
+            this.MenuItemExit.Size = new System.Drawing.Size(211, 26);
             this.MenuItemExit.Text = "Выход";
             this.MenuItemExit.Click += new System.EventHandler(this.MenuItemExit_Click);
             // 
@@ -121,20 +120,20 @@
             this.MenuItemAboutProgram});
             this.MenuItemReference.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MenuItemReference.Name = "MenuItemReference";
-            this.MenuItemReference.Size = new System.Drawing.Size(70, 20);
+            this.MenuItemReference.Size = new System.Drawing.Size(82, 21);
             this.MenuItemReference.Text = "Справка";
             // 
             // MenuItemChanges
             // 
             this.MenuItemChanges.Name = "MenuItemChanges";
-            this.MenuItemChanges.Size = new System.Drawing.Size(148, 22);
+            this.MenuItemChanges.Size = new System.Drawing.Size(185, 26);
             this.MenuItemChanges.Text = "Изменения";
             this.MenuItemChanges.Click += new System.EventHandler(this.MenuItemChanges_Click);
             // 
             // MenuItemAboutProgram
             // 
             this.MenuItemAboutProgram.Name = "MenuItemAboutProgram";
-            this.MenuItemAboutProgram.Size = new System.Drawing.Size(148, 22);
+            this.MenuItemAboutProgram.Size = new System.Drawing.Size(185, 26);
             this.MenuItemAboutProgram.Text = "О программе";
             this.MenuItemAboutProgram.Click += new System.EventHandler(this.MenuItemAboutProgram_Click);
             // 
@@ -212,14 +211,6 @@
             this.GridRename.ReadOnly = true;
             this.GridRename.Visible = false;
             // 
-            // ProgressBar
-            // 
-            this.ProgressBar.Location = new System.Drawing.Point(32, 246);
-            this.ProgressBar.Margin = new System.Windows.Forms.Padding(4);
-            this.ProgressBar.Name = "ProgressBar";
-            this.ProgressBar.Size = new System.Drawing.Size(165, 30);
-            this.ProgressBar.TabIndex = 5;
-            // 
             // ButtonStartRename
             // 
             this.ButtonStartRename.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -256,13 +247,12 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 450);
             this.Controls.Add(this.ButtonSaveIn);
             this.Controls.Add(this.ButtonSave);
             this.Controls.Add(this.ButtonStartRename);
-            this.Controls.Add(this.ProgressBar);
             this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.TextBoxFolder);
             this.Controls.Add(this.ButtonOpenFolder);
@@ -292,7 +282,6 @@
         private System.Windows.Forms.ToolStripMenuItem MenuItemReference;
         private System.Windows.Forms.ToolStripMenuItem MenuItemAboutProgram;
         private System.Windows.Forms.DataGridView DataGrid;
-        private System.Windows.Forms.ProgressBar ProgressBar;
         private System.Windows.Forms.Button ButtonStartRename;
         private System.Windows.Forms.Button ButtonSave;
         private System.Windows.Forms.Button ButtonSaveIn;

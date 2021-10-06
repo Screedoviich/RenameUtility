@@ -25,7 +25,6 @@ namespace RenameUtility
             var openFolder = new FolderBrowserDialog();
             openFolder.ShowNewFolderButton = false;
             openFolder.ShowDialog();
-            methods.CheckedSetFolder(openFolder, TextBoxFolder, ProgressBar);
         }
 
         private void MenuItemAboutProgram_Click(object sender, EventArgs e)
@@ -37,8 +36,6 @@ namespace RenameUtility
         {
             if (FileInfoCount.FileInfoList.Count > 0)
             {
-                ProgressBar.Maximum = FileInfoCount.FileInfoList.Count;
-                ProgressBar.Value = 0;
                 for (int i = 0; i < FileInfoCount.FileInfoList.Count; i++)
                 {
                     if (methods.Checked(FileInfoCount.FileInfoList[i].FileName))
@@ -51,7 +48,6 @@ namespace RenameUtility
                         FileInfoCount.FileInfoList[i].FileNameNew = "Файл не нуждается в переименовании";
                         FileInfoCount.FileInfoList[i].FileRename = false;
                     }
-                    ProgressBar.Value++;
                 }
                 Refresh();
             }

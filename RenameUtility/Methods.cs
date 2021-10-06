@@ -12,13 +12,11 @@ namespace RenameUtility
         /// </summary>
         /// <param name="openFolder">Объект открытия папки.</param>
         /// <param name="TextBoxFolder">Заданное текстовое поле.</param>
-        /// <param name="ProgressBar">Заданная шкала прогресса.</param>
-        public void CheckedSetFolder(FolderBrowserDialog openFolder, TextBox TextBoxFolder, ProgressBar ProgressBar)
+        public void CheckedSetFolder(FolderBrowserDialog openFolder, TextBox TextBoxFolder)
         {
             if (openFolder.SelectedPath.Length > 0)
             {
                 FileInfoCount.FileInfoList.Clear();
-                ProgressBar.Value = 0;
                 string directory = TextBoxFolder.Text = openFolder.SelectedPath;
                 SetNameAndExtension(directory);
             }
