@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChanges));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.GroupBox211 = new System.Windows.Forms.GroupBox();
+            this.Label211 = new System.Windows.Forms.Label();
             this.GroupBox210 = new System.Windows.Forms.GroupBox();
             this.Label210 = new System.Windows.Forms.Label();
             this.GroupBox203 = new System.Windows.Forms.GroupBox();
@@ -38,19 +40,21 @@
             this.Label202 = new System.Windows.Forms.Label();
             this.GroupBox201 = new System.Windows.Forms.GroupBox();
             this.Label201 = new System.Windows.Forms.Label();
-            this.GroupBox211 = new System.Windows.Forms.GroupBox();
-            this.Label211 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.GroupBox211.SuspendLayout();
             this.GroupBox210.SuspendLayout();
             this.GroupBox203.SuspendLayout();
             this.GroupBox202.SuspendLayout();
             this.GroupBox201.SuspendLayout();
-            this.GroupBox211.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.GroupBox211);
             this.panel1.Controls.Add(this.GroupBox210);
             this.panel1.Controls.Add(this.GroupBox203);
@@ -61,11 +65,32 @@
             this.panel1.Size = new System.Drawing.Size(384, 264);
             this.panel1.TabIndex = 0;
             // 
+            // GroupBox211
+            // 
+            this.GroupBox211.Controls.Add(this.Label211);
+            this.GroupBox211.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GroupBox211.Location = new System.Drawing.Point(8, 64);
+            this.GroupBox211.Name = "GroupBox211";
+            this.GroupBox211.Size = new System.Drawing.Size(352, 48);
+            this.GroupBox211.TabIndex = 0;
+            this.GroupBox211.TabStop = false;
+            this.GroupBox211.Text = "Версия 2.1.1_GUI";
+            // 
+            // Label211
+            // 
+            this.Label211.AutoSize = true;
+            this.Label211.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Label211.Location = new System.Drawing.Point(8, 24);
+            this.Label211.Name = "Label211";
+            this.Label211.Size = new System.Drawing.Size(225, 13);
+            this.Label211.TabIndex = 0;
+            this.Label211.Text = "Улучшение окна с установкой тегов.";
+            // 
             // GroupBox210
             // 
             this.GroupBox210.Controls.Add(this.Label210);
             this.GroupBox210.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GroupBox210.Location = new System.Drawing.Point(8, 64);
+            this.GroupBox210.Location = new System.Drawing.Point(8, 120);
             this.GroupBox210.Name = "GroupBox210";
             this.GroupBox210.Size = new System.Drawing.Size(352, 104);
             this.GroupBox210.TabIndex = 0;
@@ -88,7 +113,7 @@
             // 
             this.GroupBox203.Controls.Add(this.Label203);
             this.GroupBox203.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GroupBox203.Location = new System.Drawing.Point(8, 176);
+            this.GroupBox203.Location = new System.Drawing.Point(8, 232);
             this.GroupBox203.Name = "GroupBox203";
             this.GroupBox203.Size = new System.Drawing.Size(352, 48);
             this.GroupBox203.TabIndex = 0;
@@ -109,7 +134,7 @@
             // 
             this.GroupBox202.Controls.Add(this.Label202);
             this.GroupBox202.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GroupBox202.Location = new System.Drawing.Point(8, 232);
+            this.GroupBox202.Location = new System.Drawing.Point(8, 288);
             this.GroupBox202.Name = "GroupBox202";
             this.GroupBox202.Size = new System.Drawing.Size(352, 72);
             this.GroupBox202.TabIndex = 0;
@@ -131,7 +156,7 @@
             // 
             this.GroupBox201.Controls.Add(this.Label201);
             this.GroupBox201.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GroupBox201.Location = new System.Drawing.Point(8, 312);
+            this.GroupBox201.Location = new System.Drawing.Point(8, 368);
             this.GroupBox201.Name = "GroupBox201";
             this.GroupBox201.Size = new System.Drawing.Size(352, 88);
             this.GroupBox201.TabIndex = 0;
@@ -150,32 +175,32 @@
     " изменяя старые.\r\nСкопированы будут только те файлы, которые\r\nподлежат редактиро" +
     "ванию.";
             // 
-            // GroupBox211
+            // groupBox1
             // 
-            this.GroupBox211.Controls.Add(this.Label211);
-            this.GroupBox211.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GroupBox211.Location = new System.Drawing.Point(8, 8);
-            this.GroupBox211.Name = "GroupBox211";
-            this.GroupBox211.Size = new System.Drawing.Size(352, 48);
-            this.GroupBox211.TabIndex = 0;
-            this.GroupBox211.TabStop = false;
-            this.GroupBox211.Text = "Версия 2.1.1_GUI";
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Location = new System.Drawing.Point(8, 8);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(352, 48);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Версия 2.1.2_GUI";
             // 
-            // Label211
+            // label1
             // 
-            this.Label211.AutoSize = true;
-            this.Label211.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Label211.Location = new System.Drawing.Point(8, 24);
-            this.Label211.Name = "Label211";
-            this.Label211.Size = new System.Drawing.Size(225, 13);
-            this.Label211.TabIndex = 0;
-            this.Label211.Text = "Улучшение окна с установкой тегов.";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(8, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(331, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Различные исправления ошибок. Добавлена PXL Cam.";
             // 
             // FormChanges
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.ClientSize = new System.Drawing.Size(384, 265);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -186,6 +211,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Изменения";
             this.panel1.ResumeLayout(false);
+            this.GroupBox211.ResumeLayout(false);
+            this.GroupBox211.PerformLayout();
             this.GroupBox210.ResumeLayout(false);
             this.GroupBox210.PerformLayout();
             this.GroupBox203.ResumeLayout(false);
@@ -194,8 +221,8 @@
             this.GroupBox202.PerformLayout();
             this.GroupBox201.ResumeLayout(false);
             this.GroupBox201.PerformLayout();
-            this.GroupBox211.ResumeLayout(false);
-            this.GroupBox211.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -213,5 +240,7 @@
         private System.Windows.Forms.Label Label210;
         private System.Windows.Forms.GroupBox GroupBox211;
         private System.Windows.Forms.Label Label211;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

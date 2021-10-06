@@ -77,9 +77,9 @@
             this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(16, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 16);
+            this.label1.Size = new System.Drawing.Size(89, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "© 2019 - 2020";
+            this.label1.Text = "2019 - 2021";
             // 
             // LabelAboutProgram6
             // 
@@ -99,7 +99,7 @@
             this.LabelAboutProgram5.Name = "LabelAboutProgram5";
             this.LabelAboutProgram5.Size = new System.Drawing.Size(73, 16);
             this.LabelAboutProgram5.TabIndex = 1;
-            this.LabelAboutProgram5.Text = "2.1.1_GUI";
+            this.LabelAboutProgram5.Text = "2.1.2_GUI";
             // 
             // LabelAboutProgram4
             // 
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 268);
+            this.ClientSize = new System.Drawing.Size(488, 272);
             this.Controls.Add(this.GroupBoxDescription);
             this.Controls.Add(this.GroupBoxInfoAboutProgram);
             this.Controls.Add(this.PictureBox);

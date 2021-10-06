@@ -35,44 +35,84 @@ namespace RenameUtility
 
         private void ButtonStartRename_Click(object sender, EventArgs e)
         {
-            ProgressBar.Maximum = FileInfoCount.FileInfoList.Count;
-            ProgressBar.Value = 0;
-            for (int i = 0; i < FileInfoCount.FileInfoList.Count; i++)
+            if (FileInfoCount.FileInfoList.Count > 0)
             {
-                if (methods.Checked(FileInfoCount.FileInfoList[i].FileName))
+                ProgressBar.Maximum = FileInfoCount.FileInfoList.Count;
+                ProgressBar.Value = 0;
+                for (int i = 0; i < FileInfoCount.FileInfoList.Count; i++)
                 {
-                    FileInfoCount.FileInfoList[i].FileNameNew = methods.ChangeName(FileInfoCount.FileInfoList[i].FileName, FormTagsSettings.Tags, FormTagsSettings.TagPhoto, FormTagsSettings.TagVideo, FormTagsSettings.TagSelf);
-                    FileInfoCount.FileInfoList[i].FileRename = true;
+                    if (methods.Checked(FileInfoCount.FileInfoList[i].FileName))
+                    {
+                        FileInfoCount.FileInfoList[i].FileNameNew = methods.ChangeName(FileInfoCount.FileInfoList[i].FileName, FormTagsSettings.Tags, FormTagsSettings.TagPhoto, FormTagsSettings.TagVideo, FormTagsSettings.TagSelf);
+                        FileInfoCount.FileInfoList[i].FileRename = true;
+                    }
+                    else
+                    {
+                        FileInfoCount.FileInfoList[i].FileNameNew = "Файл не нуждается в переименовании";
+                        FileInfoCount.FileInfoList[i].FileRename = false;
+                    }
+                    ProgressBar.Value++;
                 }
-                else
-                {
-                    FileInfoCount.FileInfoList[i].FileNameNew = "Файл не нуждается в переименовании";
-                    FileInfoCount.FileInfoList[i].FileRename = false;
-                }
-                ProgressBar.Value++;
+                Refresh();
             }
-            Refresh();
+            else
+            {
+                MessageBox.Show("Нет выбранных файлов для переименования", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < FileInfoCount.FileInfoList.Count; i++)
+            //Существуют ли вообще файлы для сохранения
+            if (FileInfoCount.FileInfoList.Count > 0)
             {
-                if (FileInfoCount.FileInfoList[i].FileRename)
+                //Флаг на присутствие хотя бы одного файла для сохранения
+                bool renameTrue = false;
+                for (int i = 0; i < FileInfoCount.FileInfoList.Count; i++)
                 {
-                    File.Move(FileInfoCount.FileInfoList[i].FileDirectory + FileInfoCount.FileInfoList[i].FileName + FileInfoCount.FileInfoList[i].FileExtension, FileInfoCount.FileInfoList[i].FileDirectory + FileInfoCount.FileInfoList[i].FileNameNew + FileInfoCount.FileInfoList[i].FileExtension);
+                    if (FileInfoCount.FileInfoList[i].FileRename)
+                    {
+                        File.Move(FileInfoCount.FileInfoList[i].FileDirectory + FileInfoCount.FileInfoList[i].FileName + FileInfoCount.FileInfoList[i].FileExtension, FileInfoCount.FileInfoList[i].FileDirectory + FileInfoCount.FileInfoList[i].FileNameNew + FileInfoCount.FileInfoList[i].FileExtension);
+                        renameTrue = true;
+                    }
+                }
+                if (renameTrue)
+                {
+                    MessageBox.Show("Все заданные файлы сохранены!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Файлы не нуждаются в переименовании", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            MessageBox.Show("Все заданные файлы сохранены!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                MessageBox.Show("Нет выбранных файлов для сохранения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ButtonSaveIn_Click(object sender, EventArgs e)
         {
-            var openFolder = new FolderBrowserDialog();
-            openFolder.ShowNewFolderButton = false;
-            openFolder.ShowDialog();
-            new FormSave(openFolder).ShowDialog();
-            MessageBox.Show("Все заданные файлы сохранены!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (FileInfoCount.FileInfoList.Count > 0)
+            {
+                if (methods.RenameTrue())
+                {
+                    var openFolder = new FolderBrowserDialog();
+                    openFolder.ShowNewFolderButton = false;
+                    openFolder.ShowDialog();
+                    new FormSave(openFolder).ShowDialog();
+                    MessageBox.Show("Все заданные файлы сохранены!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Файлы не нуждаются в переименовании", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Нет выбранных файлов для сохранения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void MenuItemExit_Click(object sender, EventArgs e)

@@ -15,16 +15,12 @@ namespace RenameUtility
         /// <param name="ProgressBar">Заданная шкала прогресса.</param>
         public void CheckedSetFolder(FolderBrowserDialog openFolder, TextBox TextBoxFolder, ProgressBar ProgressBar)
         {
-            if (openFolder.SelectedPath.Length != 0)
+            if (openFolder.SelectedPath.Length > 0)
             {
                 FileInfoCount.FileInfoList.Clear();
                 ProgressBar.Value = 0;
                 string directory = TextBoxFolder.Text = openFolder.SelectedPath;
                 SetNameAndExtension(directory);
-            }
-            else
-            {
-                MessageBox.Show("Вы не выбрали папку", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -58,14 +54,34 @@ namespace RenameUtility
         /// <returns>Истинное или ложное значение.</returns>
         public bool Checked(string fileName)
         {
-            if ((fileName.Length > 18) && ((fileName.Contains("IMG")) || (fileName.Contains("VID"))))
+            try
             {
-                return true;
+                if (fileName.Substring(0, 4) == "IMG_")
+                {
+                    return true;
+                }
+                else if (fileName.Substring(0, 4) == "VID_")
+                {
+                    return true;
+                }
+                else if (fileName.Substring(0, 4) == "PXL_")
+                {
+                    return true;
+                }
+                else if (fileName.Substring(0, 14) == "PixelCam_Plus_")
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch
             {
                 return false;
             }
+            
         }
 
         /// <summary>
@@ -82,6 +98,7 @@ namespace RenameUtility
             var strBuildName = new StringBuilder();
             strBuildName.Append(fileName);
             strBuildName.Replace("PixelCam_Plus_", String.Empty);
+            strBuildName.Replace("PXL_", String.Empty);
             strBuildName.Replace("IMG_", String.Empty);
             strBuildName.Replace("VID_", String.Empty);
             strBuildName.Insert(4, ".");
@@ -140,6 +157,23 @@ namespace RenameUtility
                 }
             }
             return tempCount;
+        }
+
+        /// <summary>
+        /// Временный метод, который проверяет существует ли файл для переименования из списка.
+        /// ОБЯЗАТЕЛЬНО ИЗБАВИТЬСЯ!!!
+        /// </summary>
+        /// <returns></returns>
+        public bool RenameTrue()
+        {
+            for (int i = 0; i < FileInfoCount.FileInfoList.Count; i++)
+            {
+                if (FileInfoCount.FileInfoList[i].FileRename)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
