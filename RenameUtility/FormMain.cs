@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
 
 namespace RenameUtility
@@ -16,6 +15,7 @@ namespace RenameUtility
         private void FormMain_Load(object sender, EventArgs e)
         {
             DataGrid.DataSource = FileInfoCount.FileInfoList;
+            //Стандартные значения тегов для изображений и видеофайлов.
             FormTagsSettings.TagPhoto = "_IMG";
             FormTagsSettings.TagVideo = "_VID";
         }
@@ -25,6 +25,11 @@ namespace RenameUtility
             var openFolder = new FolderBrowserDialog();
             openFolder.ShowNewFolderButton = false;
             openFolder.ShowDialog();
+            if(methods.CheckedSetFolder(openFolder.SelectedPath, TextBoxFolder))
+            {
+                ButtonSave.Enabled = true;
+                ButtonSaveIn.Enabled = true;
+            }
         }
 
         private void MenuItemAboutProgram_Click(object sender, EventArgs e)
@@ -34,81 +39,19 @@ namespace RenameUtility
 
         private void ButtonStartRename_Click(object sender, EventArgs e)
         {
-            if (FileInfoCount.FileInfoList.Count > 0)
-            {
-                for (int i = 0; i < FileInfoCount.FileInfoList.Count; i++)
-                {
-                    if (methods.Checked(FileInfoCount.FileInfoList[i].FileName))
-                    {
-                        FileInfoCount.FileInfoList[i].FileNameNew = methods.ChangeName(FileInfoCount.FileInfoList[i].FileName, FormTagsSettings.Tags, FormTagsSettings.TagPhoto, FormTagsSettings.TagVideo, FormTagsSettings.TagSelf);
-                        FileInfoCount.FileInfoList[i].FileRename = true;
-                    }
-                    else
-                    {
-                        FileInfoCount.FileInfoList[i].FileNameNew = "Файл не нуждается в переименовании";
-                        FileInfoCount.FileInfoList[i].FileRename = false;
-                    }
-                }
-                Refresh();
-            }
-            else
-            {
-                MessageBox.Show("Нет выбранных файлов для переименования", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            methods.StartRename(this);
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            //Существуют ли вообще файлы для сохранения
-            if (FileInfoCount.FileInfoList.Count > 0)
-            {
-                //Флаг на присутствие хотя бы одного файла для сохранения
-                bool renameTrue = false;
-                for (int i = 0; i < FileInfoCount.FileInfoList.Count; i++)
-                {
-                    if (FileInfoCount.FileInfoList[i].FileRename)
-                    {
-                        File.Move(FileInfoCount.FileInfoList[i].FileDirectory + FileInfoCount.FileInfoList[i].FileName + FileInfoCount.FileInfoList[i].FileExtension, FileInfoCount.FileInfoList[i].FileDirectory + FileInfoCount.FileInfoList[i].FileNameNew + FileInfoCount.FileInfoList[i].FileExtension);
-                        renameTrue = true;
-                    }
-                }
-                if (renameTrue)
-                {
-                    MessageBox.Show("Все заданные файлы сохранены!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Файлы не нуждаются в переименовании", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Нет выбранных файлов для сохранения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //false - Сохранение в одной и той же папке. SaveChecked ведёт на метод сохранения.
+            methods.SaveChecked(false, ButtonSave, ButtonSaveIn);
         }
 
         private void ButtonSaveIn_Click(object sender, EventArgs e)
         {
-            if (FileInfoCount.FileInfoList.Count > 0)
-            {
-                if (methods.RenameTrue())
-                {
-                    var openFolder = new FolderBrowserDialog();
-                    openFolder.ShowNewFolderButton = false;
-                    openFolder.ShowDialog();
-                    new FormSave(openFolder).ShowDialog();
-                    MessageBox.Show("Все заданные файлы сохранены!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Файлы не нуждаются в переименовании", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Нет выбранных файлов для сохранения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
+            //true - Сохранение в папке, которую укажет пользователь. SaveChecked ведёт на метод сохранения.
+            methods.SaveChecked(true, null, null);
         }
 
         private void MenuItemExit_Click(object sender, EventArgs e)

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTagsSettings));
             this.GroupBoxTagsSettings1 = new System.Windows.Forms.GroupBox();
+            this.CheckBoxTags = new System.Windows.Forms.CheckBox();
             this.TextBoxTagVideo = new System.Windows.Forms.TextBox();
             this.TextBoxTagPhoto = new System.Windows.Forms.TextBox();
             this.LabelVideo = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.GroupBoxTagsSettings2 = new System.Windows.Forms.GroupBox();
             this.TextBoxTagSelf = new System.Windows.Forms.TextBox();
             this.LabelSelf = new System.Windows.Forms.Label();
-            this.CheckBoxTags = new System.Windows.Forms.CheckBox();
             this.GroupBoxTagsSettings1.SuspendLayout();
             this.GroupBoxTagsSettings2.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,17 @@
             this.GroupBoxTagsSettings1.TabIndex = 0;
             this.GroupBoxTagsSettings1.TabStop = false;
             this.GroupBoxTagsSettings1.Text = "Метки для фото и видео";
+            // 
+            // CheckBoxTags
+            // 
+            this.CheckBoxTags.AutoSize = true;
+            this.CheckBoxTags.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CheckBoxTags.Location = new System.Drawing.Point(8, 24);
+            this.CheckBoxTags.Name = "CheckBoxTags";
+            this.CheckBoxTags.Size = new System.Drawing.Size(200, 18);
+            this.CheckBoxTags.TabIndex = 0;
+            this.CheckBoxTags.Text = "Теги в конце имени файла";
+            this.CheckBoxTags.UseVisualStyleBackColor = true;
             // 
             // TextBoxTagVideo
             // 
@@ -123,28 +134,18 @@
             this.LabelSelf.TabIndex = 0;
             this.LabelSelf.Text = "Введите собственный тег \r\nв конце файла:";
             // 
-            // CheckBoxTags
-            // 
-            this.CheckBoxTags.AutoSize = true;
-            this.CheckBoxTags.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CheckBoxTags.Location = new System.Drawing.Point(8, 24);
-            this.CheckBoxTags.Name = "CheckBoxTags";
-            this.CheckBoxTags.Size = new System.Drawing.Size(200, 18);
-            this.CheckBoxTags.TabIndex = 0;
-            this.CheckBoxTags.Text = "Теги в конце имени файла";
-            this.CheckBoxTags.UseVisualStyleBackColor = true;
-            // 
             // FormTagsSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 251);
+            this.ClientSize = new System.Drawing.Size(274, 245);
             this.Controls.Add(this.GroupBoxTagsSettings2);
             this.Controls.Add(this.GroupBoxTagsSettings1);
             this.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(290, 270);
+            this.MaximumSize = new System.Drawing.Size(290, 280);
+            this.MinimumSize = new System.Drawing.Size(290, 280);
             this.Name = "FormTagsSettings";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

@@ -99,7 +99,7 @@
             this.LabelAboutProgram5.Name = "LabelAboutProgram5";
             this.LabelAboutProgram5.Size = new System.Drawing.Size(73, 16);
             this.LabelAboutProgram5.TabIndex = 1;
-            this.LabelAboutProgram5.Text = "2.1.2_GUI";
+            this.LabelAboutProgram5.Text = "2.1.3_GUI";
             // 
             // LabelAboutProgram4
             // 

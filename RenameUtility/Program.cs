@@ -59,5 +59,16 @@ namespace RenameUtility
     public class FileInfoCount
     {
         public static BindingList<FileInfo> FileInfoList = new BindingList<FileInfo>();
+        //Подлежит ли хотя бы один файл из списка к переименованию.
+        public static bool ListRename;
+    }
+
+    /// <summary>
+    /// Хранение данных формата файла для тегов к видео и изображениям
+    /// </summary>
+    public static class Extensions
+    {
+        public static readonly string[] forVideo = new string[] { ".3gp", ".mp4" };
+        public static readonly string[] forPicture = new string[] { ".jpg", ".jpeg", ".png" };
     }
 }
